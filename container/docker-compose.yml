@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  gsutil:
+    build:
+      context: ..
+      dockerfile: container/Dockerfile
+    working_dir: /workspace/data
+    volumes:
+      - /home/cefect/LS/10_IO/2501_NSFc/MODIS_GlobalFloodDatabase:/workspace/data
+      - ..:/workspace/project
